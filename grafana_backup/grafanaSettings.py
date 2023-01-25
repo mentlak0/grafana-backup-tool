@@ -69,13 +69,6 @@ def main(config_path):
     if not os.getenv('GOOGLE_APPLICATION_CREDENTIALS') and google_application_credentials:
         os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = google_application_credentials
 
-    INFLUXDB_MEASUREMENT = os.getenv('INFLUXDB_MEASUREMENT', influxdb_measurement)
-    INFLUXDB_HOST = os.getenv('INFLUXDB_HOST', influxdb_host)
-    INFLUXDB_PORT = int(os.getenv('INFLUXDB_PORT', influxdb_port))
-    INFLUXDB_USERNAME = os.getenv('INFLUXDB_USERNAME', influxdb_username)
-    INFLUXDB_PASSWORD = os.getenv('INFLUXDB_PASSWORD', influxdb_password)
-    INFLUXDB_DATABASE = os.getenv('INFLUXDB_DATABASE', influxdb_database)
-
     ADMIN_ACCOUNT = os.getenv('GRAFANA_ADMIN_ACCOUNT', admin_account)
     ADMIN_PASSWORD = os.getenv('GRAFANA_ADMIN_PASSWORD', admin_password)
     GRAFANA_BASIC_AUTH = os.getenv('GRAFANA_BASIC_AUTH', None)
