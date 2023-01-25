@@ -41,13 +41,6 @@ def main(config_path):
     gcs_bucket_name = gcp_config.get('gcs_bucket_name', '')
     google_application_credentials = gcp_config.get('google_application_credentials', '')
 
-    influxdb_measurement = config.get('influxdb', {}).get('measurement', 'grafana_backup')
-    influxdb_host = config.get('influxdb', {}).get('host', '')
-    influxdb_port = config.get('influxdb', {}).get('port', 8086)
-    influxdb_username = config.get('influxdb', {}).get('username', '')
-    influxdb_password = config.get('influxdb', {}).get('password', '')
-    influxdb_database = config.get('influxdb', {}).get('database', '')
-
     admin_account = config.get('grafana', {}).get('admin_account', '')
     admin_password = config.get('grafana', {}).get('admin_password', '')
 
